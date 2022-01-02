@@ -100,6 +100,14 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# iTerm2 shell integration test
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
+# Enable config sync using version control
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+# Load Antigen
+source /opt/homebrew/share/antigen/antigen.zsh
+
+# Load Antigen configurations
+antigen init ~/.antigenrc
