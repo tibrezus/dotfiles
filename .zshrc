@@ -102,4 +102,4 @@ source $ZSH/oh-my-zsh.sh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
-alias config='/usr/bin/git --git-dir=${HOME}/.cfg/ --work-tree=${HOME}'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
