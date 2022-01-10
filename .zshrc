@@ -101,13 +101,19 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # iTerm2 shell integration test
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
+if [[ $OSTYPE == 'darwin'* ]]; then
+	test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
+fi
 
 # Enable config sync using version control
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # Load Antigen
-source /opt/homebrew/share/antigen/antigen.zsh
+if [[ $OSTYPE == 'darwin'* ]]; then
+	source /opt/homebrew/share/antigen/antigen.zsh
+else
+	source /usr/share/zsh/share/antigen.zsh
+fi
 
 # Load Antigen configurations
 antigen init ~/.antigenrc
