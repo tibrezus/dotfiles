@@ -109,7 +109,8 @@ fi
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # Load Antigen
-if [[ $OSTYPE == 'darwin'* ]]; then
+if [[ $OSTYPE == 'darwin'* ]]
+then
 	source /opt/homebrew/share/antigen/antigen.zsh
 else
 	source /usr/share/zsh/share/antigen.zsh

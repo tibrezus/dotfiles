@@ -13,11 +13,19 @@ antigen bundle compleat
 antigen bundle git-extras
 antigen bundle git-flow
 
+# MacOS only bundles
+if [[ $OSTYPE == 'darwin'* ]]; then
+  antigen bundle brew
+  antigen bundle macos
+fi
+
 # Load bundles from external repos
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search ./zsh-history-substring-search.zsh
+
+antigen bundle Lokaltog/powerline powerline/bindings/zsh
 
 # Select theme
 antigen theme denysdovhan/spaceship-prompt
